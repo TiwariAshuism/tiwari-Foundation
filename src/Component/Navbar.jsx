@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Logo from './assest/logo.png';
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -10,31 +10,31 @@ export const Navbar = () => {
           <li>
             <a
               href="https://google.com"
-              aria-label="Our product"
-              title="Our product"
+              aria-label="About"
+              title="About"
               class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Product
+              About
             </a>
           </li>
           <li>
             <a
               href="/"
-              aria-label="Our product"
-              title="Our product"
+              aria-label="About"
+              title="About"
               class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Features
+              Photo Gallary
             </a>
           </li>
           <li>
             <a
               href="/"
-              aria-label="Product pricing"
-              title="Product pricing"
+              aria-label="Campaigns"
+              title="Campaigns"
               class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Pricing
+              Campaigns
             </a>
           </li>
         </ul>
@@ -44,36 +44,14 @@ export const Navbar = () => {
           title="Companyy"
           class="inline-flex items-center lg:mx-auto"
         >
-          <svg
-            class="w-8 text-deep-purple-accent-400"
-            viewBox="0 0 24 24"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            stroke="currentColor"
-            fill="none"
-          >
-            <rect x="3" y="1" width="7" height="12" />
-            <rect x="3" y="17" width="7" height="6" />
-            <rect x="14" y="1" width="7" height="6" />
-            <rect x="14" y="11" width="7" height="12" />
-          </svg>
+                  <img src={Logo} class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+
           <span class="ml-2 text-xl font-bold tracking-wide text-white-700 uppercase">
-            Company
+            Tiwari Foundation
           </span>
         </a>
         <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
-          <li>
-            <a
-              href="/"
-              aria-label="Sign in"
-              title="Sign in"
-              class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Sign in
-            </a>
-          </li>
+          
           <li>
             <a
               href="/"
@@ -81,7 +59,7 @@ export const Navbar = () => {
               aria-label="Sign up"
               title="Sign up"
             >
-              Sign up
+              Donate
             </a>
           </li>
         </ul>
@@ -159,8 +137,8 @@ export const Navbar = () => {
                     <li>
                       <a
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
+                        aria-label="About"
+                        title="About"
                         class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Product
@@ -169,8 +147,8 @@ export const Navbar = () => {
                     <li>
                       <a
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
+                        aria-label="About"
+                        title="About"
                         class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Features
@@ -179,8 +157,8 @@ export const Navbar = () => {
                     <li>
                       <a
                         href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
+                        aria-label="Campaigns"
+                        title="Campaigns"
                         class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Pricing
@@ -200,10 +178,10 @@ export const Navbar = () => {
                       <a
                         href="/"
                         class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Sign up"
-                        title="Sign up"
+                        aria-label="Donate"
+                        title="Donate"
                       >
-                        Sign up
+                        Donate
                       </a>
                     </li>
                   </ul>

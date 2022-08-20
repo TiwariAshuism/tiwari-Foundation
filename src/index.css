@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 body{
-  background-color:rgb(255, 255, 210);
-  color: rgb(168, 216, 234);
+  background-color:#b7cb99ba;
+  color: #431D32  ;
+}
+::-webkit-scrollbar{
+  display: none;
 }
