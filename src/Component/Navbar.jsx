@@ -1,5 +1,7 @@
 import { useState } from "react";
-import Logo from './assest/logo.png';
+
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import Logo from "./assest/logo.png";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -8,34 +10,34 @@ export const Navbar = () => {
       <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <a
-              href="https://google.com"
-              aria-label="About"
-              title="About"
-              class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+            <AnchorLink
+              href="#About"
+              spy={true}
+              smooth={true}
+              className="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               About
-            </a>
+            </AnchorLink>
           </li>
           <li>
-            <a
-              href="/"
+            <AnchorLink
+              href="#Gallery"
               aria-label="About"
               title="About"
               class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
-              Photo Gallary
-            </a>
+              Photo Gallery
+            </AnchorLink>
           </li>
           <li>
-            <a
-              href="/"
+            <AnchorLink
+              href="#Campaigns"
               aria-label="Campaigns"
               title="Campaigns"
               class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
             >
               Campaigns
-            </a>
+            </AnchorLink>
           </li>
         </ul>
         <a
@@ -44,14 +46,13 @@ export const Navbar = () => {
           title="Companyy"
           class="inline-flex items-center lg:mx-auto"
         >
-                  <img src={Logo} class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+          <img src={Logo} class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
 
           <span class="ml-2 text-xl font-bold tracking-wide text-white-700 uppercase">
             Tiwari Foundation
           </span>
         </a>
         <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
-          
           <li>
             <a
               href="/"

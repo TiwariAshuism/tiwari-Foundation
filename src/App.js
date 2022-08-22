@@ -4,10 +4,11 @@ import Header from "./Component/Hero";
 import Process from "./Component/Process";
 import Campaigns from "./Component/Campaigns";
 import Gallary from "./Component/Gallary";
-
+import { BrowserRouter } from "react-router-dom";
 import Footer from "./Component/Footer";
 export const App = () => {
   return (
+    <BrowserRouter>
     <div>
       <Navbar />
       <div>
@@ -27,8 +28,7 @@ export const App = () => {
       <Footer/>
     </div>
     </div>
-    
-  );
+    </BrowserRouter>  );
 };
 
 export default App;
