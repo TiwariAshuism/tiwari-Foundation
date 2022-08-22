@@ -4,7 +4,34 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Logo from "./assest/logo.png";
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let amount = 100;
+    var options = {
+      key: "rzp_test_5NjjkLN2BSk56X",
+      key_secret: "Ee2wZgRjIjyXMgIo1at3pxad",
+      amount: amount * 100,
+      currency: "INR",
+      name: "STARTUP_PROJECTS",
+      description: "for testing purpose",
+      handler: function (response) {
+        window.location.assign("https://google.com"); 
+      },
+      prefill: {
+        name: "Velmurugan",
+        email: "mvel1620r@gmail.com",
+        contact: "7904425033",
+      },
+      notes: {
+        address: "Razorpay Corporate office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    var pay = new window.Razorpay(options);
+    pay.open();
+  };
   return (
     <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div class="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
@@ -54,14 +81,8 @@ export const Navbar = () => {
         </a>
         <ul class="flex items-center hidden ml-auto space-x-8 lg:flex">
           <li>
-            <a
-              href="/"
-              class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
-            >
-              Donate
-            </a>
+          <button onClick={handleSubmit} className="mr-3 inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">Donate</button>
+             
           </li>
         </ul>
         <div class="ml-auto lg:hidden">
@@ -165,25 +186,9 @@ export const Navbar = () => {
                         Pricing
                       </a>
                     </li>
+                    <li></li>
                     <li>
-                      <a
-                        href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        class="font-medium tracking-wide text-white-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Sign in
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                        aria-label="Donate"
-                        title="Donate"
-                      >
-                        Donate
-                      </a>
+                    <button onClick={handleSubmit} className="mr-3 inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">Donate</button>
                     </li>
                   </ul>
                 </nav>
